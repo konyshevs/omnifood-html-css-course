@@ -502,6 +502,22 @@ cite img {
 /* --------------------------------------------------------------*/
 /* FORM */
 /*---------------------------------------------------------------*/
+.form-message {
+  color: #333;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 50%;
+  padding: 5px 10px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.success {
+  background-color: rgba(8, 163, 8, 0.8);
+}
+.error {
+  background-color: rgba(207, 4, 4, 0.8);
+}
 
 .contact-form {
   width: 60%;

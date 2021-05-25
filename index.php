@@ -520,12 +520,27 @@
       </div>
     </section>
 
-    <section class="section-form">
+    <section class="section-form" id="form">
       <div class="row">
         <h2>We're happy to hear from you</h2>
       </div>
       <div class="row">
-        <form class="contact-form">
+          <?php
+          if($_GET['success'] == 1){
+              echo "<div class='form-message success'>
+              Thank you! Your message has been sent.
+            </div>";
+          }
+          if($_GET['success'] == 1){
+            echo "<div class='form-message error'>
+            Ops! Something went wrong. Please try again!
+          </div>";
+        }
+        
+        ?>
+      </div>
+      <div class="row">
+        <form class="contact-form" action="mailer.php">
           <div class="row">
             <div class="col span-1-of-3">
               <label for="name">Name</label>
@@ -556,10 +571,10 @@
           </div>
           <div class="row">
             <div class="col span-1-of-3">
-              <label for="find">How did you find us?</label>
+              <label for="find-us">How did you find us?</label>
             </div>
             <div class="col span-2-of-3">
-              <select name="find" id="find">
+              <select name="find-us" id="find-us">
                 <option value="friends">Friends</option>
                 <option value="search">Search engine</option>
                 <option value="ad">Adventisement</option>
